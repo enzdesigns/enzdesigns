@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<title> </title>
+<p><a href="../index.html">Back to Home</a></p><br><br>
+<H3>The right notification at the right time - example use case</H3>
+<meta name="description" content="Content Timeline HTML5/jQuery plugin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<!-- <link href="css/flat.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/lightbox.css" rel="stylesheet" type="text/css" />
+<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" /> -->
+<link href="css/journey.css" rel="stylesheet" type="text/css" />
+
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.timeline.js"></script>
+<script type="text/javascript" src="js/image.js"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+
+
+
+</head>
+<body>
+
+<div class="timelineLoader">
+	<img src="images/timeline/loadingAnimation.gif" />
+</div>
+<!-- BEGIN TIMELINE -->
+<div class="timelineFlat tl1">
+		<div class="item" data-id="11/08/2012" data-name="11:00AM" data-image = "images/img_train.png" data-height="100" data-description="On train to SF">
+			<a class="image_rollover_bottom con_borderImage" data-description="ZOOM IN"  href="images/1100.png" rel="lightbox[timeline]">
+			<img src="images/1100.png" alt=""/>
+			</a>
+			<h2>11:00AM</h2>
+			<span>Dan Foreman takes the train to SF. While on the train he captures his impression from the meeting earlier that day: "Meeting with John went well".  </span>
+			<h2>11:05AM</h2>
+			<span>Few minutes later, Dan remembers that since the meeting took place over breakfast, he should expense it. He captures "Met with John for breakfast and it was $30". </span>
+			<!-- <div class="read_more" data-id="11/08/2012">Read more</div> -->
+		</div>
+		<!--<div class="item_open" data-id="11/08/2012">
+			<div class="timeline_open_content">
+			<h2>LOREM IPSUM DOLOR</h2>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /><br />
+			
+			Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+		</div>-->
+		
+		<div class="item" data-id="19/08/2012" data-name="12:15PM" data-image = "images/img_lunch.png" data-height="40" data-description="Lunch">
+			<a class="image_rollover_bottom con_borderImage" data-description="ZOOM IN" href="images/1210.png" rel="lightbox[timeline]">
+			<img src="images/1210.png" alt=""/>
+			</a>
+<!-- 			<h2>12:00PM</h2>
+			<span>Arriving at SF, Dan realizes that he has time before his next meeting, and decides to grab a quick lunch.
+			</span> -->
+			<h2>12:15PM</h2>
+			<span>As he grabs lunch, Dan looks at the notifications on his phone and notices two new items. His earlier note "Meeting with John went well" shows a system generated suggestion to log a Call Report. Dan Accepts the suggestion, which creates the report. With one tap he is done.  
+			<br><br>
+			
+			Next he opens the second notification. This one is a reminder about his breakfast expense. The system suggests an expense form that is automatically filled with content, based on the capture and the time and date it was entered. Dan checks that all the information is correct and taps on "Accept" to generate the report.
+</span>
+		<div class="read_more" data-id="19/08/2012" >Read more ></div>
+			
+		</div>
+		<div class="item_open" data-id="19/08/2012">
+			<div class="timeline_open_content">
+			<h2>What did you just see?</h2>
+			<ul style="padding-left: 15px;">
+				<li>The framework identifies the string of text as a "Capture Event" and invokes the CHASER NLU component.</li><br>
+				<li>Identification of John as John Laweson the client was done using the Relationship Network.</li><br>
+				<li>The user intent to log an expense was identified using NLP and NLU.</li><br>
+				<li>The combination of keywords like 'breakfast' and 'John' who is a client, helped define the intent.</li><br>
+				<li>NLP, Location and Time and Relationship Network were all used to populate the fields in the expense form.</li><br>
+			</ul>
+			</div>
+		</div>
+
+
+	
+		
+		<div class="item" data-id="24/08/2012" data-name="12:30PM" data-image = "images/img_walk.png" data-height="100" data-description=" Walking to Next Meeting">
+			<a class="image_rollover_bottom con_borderImage" data-description="ZOOM IN" href="images/1245.png" rel="lightbox[timeline]">
+			<img src="images/1245.png" alt=""/>
+			</a>
+			<h2>12:30PM</h2>
+			<span>Taking a quickly look at his phone Dan notices a notification about his upcoming meeting in 15 minutes. He clears up his tray and quickly walks toward the meeting location.</span>
+
+			
+			
+		</div>
+
+		<div class="item" data-id="26/08/2012" data-name="" data-image = "" data-height="0" data-description="">
+			<a class="image_rollover_bottom con_borderImage" data-description="ZOOM IN" href="images/1250.png" rel="lightbox[timeline]">
+			<img src="images/1250.png" alt=""/>
+			</a>
+			<h2>12:50PM</h2>
+			<span>As he arrives at the meeting location he takes one last look at his phone, and sees a new SR alert from the customers he is about to meet. The SR states that the server is down and is causing a real issue. Dan quickly calls the support contact on the account to get an update on the issue and how it is being addressed.</span>
+			
+			<div class="read_more" data-id="26/08/2012">Read more ></div>
+			
+		</div>
+        
+		<div class="item_open" data-id="26/08/2012">
+			<div class="timeline_open_content">
+			<h2>What did you just see?</h2>
+			<ul style="padding-left: 15px;">
+				<li>When the user logs into the mobile app, the framework identifies the "login event" and invokes the Relationship Network to identify the most important task for the user.</li><br>
+				<li>The SR alert is being pushed to the user using Logic Rules that identify the urgency level of the SR based on time, location, and upcoming activities.</li><br>
+				<li>Logic Rules also helped identify that the SR alert is more important than the Upcoming Meeting notification and therefore placed it at the top of the screen. </li>
+			</ul>
+		 		
+			</div>
+		</div>
+
+		
+		<div class="item" data-id="28/08/2012" data-name="1:00PM" data-image = "images/img_meeting.png" data-height="40" data-description="Meeting">
+			<a class="image_rollover_bottom con_borderImage" data-description="ZOOM IN" href="images/1300.png" rel="lightbox[timeline]">
+			<img src="images/1300.png" alt=""/>
+			</a>
+			<h2>1:00PM</h2>
+			<span>Dan goes into the meeting fully prepared to talk about the issue, reassuring the customer that fixing this problem is a high priority for his business, that he has already contacted the support team, and that they are cranking through it. He promises to get back to them with an ETA within two hours: "Your business is important to us, and we are doing everything we can to fix this issue asap."</span>
+		</div>
+		
+		<div class="item" data-id="06/09/2012" data-name="2:05PM" data-image = "images/img_walk.png" data-height="100" data-description="After Meeting">
+			<a class="image_rollover_bottom con_borderImage" data-description="ZOOM IN" href="images/1405.png" rel="lightbox[timeline]">
+			<img src="images/1405.png" alt=""/>
+			</a>
+			<h2>2:05PM</h2>
+			<span>Dan's meeting went well. Heading back to the train station, he captures: "Meeting regarding Green Server was good. Win percentage higher."
+			</span>
+		</div>
+
+		<div class="item" data-id="14/09/2012" data-name="3:00PM" data-image = "images/img_train.png" data-height="50" data-description="On train">
+			<a class="image_rollover_bottom con_borderImage" data-description="ZOOM IN" href="images/1510.png" rel="lightbox[timeline]">
+			<img src="images/1510.png" alt=""/>
+			</a>
+			<h2>3:10PM</h2>
+			<span>Dan takes a quick look at his capture summarizing his 1pm meeting and the system suggestions to create a Call Report and update the Win Percentage for the Green Server opportunity. He wants to put a bit more thought into it, as well as check the status of the SR. He will deal with it later once back in the office.
+			</span>
+		</div>
+
+		<div class="item" data-id="23/09/2012" data-name="4:30PM" data-image = "images/img_desktop.png" data-height="60" data-description=" Back in office">
+			<a class="image_rollover_bottom con_borderImage" data-description="ZOOM IN" href="images/1630.png" rel="lightbox[timeline]">
+			<img src="images/1630.png" alt=""/>
+			</a>
+			<h2>4:30PM</h2>
+			<span> Back in the office, Dan uses his laptop to log into his Oracle applications. He sees few recommended actions on the banner view, and clicks on the bell icon to read notifications. His earlier capture is there reminding him about the outcome of the meeting he had in SF. Now that he has a bit more time, he can take the required steps to follow up on open items.
+			</span>
+		</div>
+        
+
+
+
+		
+
+
+<script type="text/javascript">
+
+$(window).load(function() {
+	// light
+	$('.tl1').timeline({
+		openTriggerClass : '.read_more',
+		startItem : '19/08/2012',
+		closeText : 'x',
+		closeItemOnTransition: true,
+		ajaxFailMessage: 'This ajax fail is made on purpose. You can add your own message here, just remember to escape single quotes if you\'re using them.'
+	});
+	$('.tl1').on('ajaxLoaded.timeline', function(e){
+
+		var height = e.element.height()-60-e.element.find('h2').height();
+		e.element.find('.timeline_open_content span').css('max-height', height).mCustomScrollbar({
+			autoHideScrollbar:true,
+			theme:"light-thin"
+		});	
+	});
+	
+	//MOD_0710: apply custom height values
+	$('.t_node_desc span').each(function(){
+		$(this).css('margin-top',-$(this).attr("data-height"));
+		// hide desc span when data-height is 0
+		if($(this).attr("data-height")==0){$(this).css("opacity","0")};
+		$(this).after('<div class="vertical_line" style=" height:'+$(this).attr("data-height")+'px; "></div>');
+	});
+	$('.t_line_holder').after('<div style="width:1000px; height:1px; background-color:#D5DCE1;position:absolute;bottom:39px; z-index:-4"></div>')
+
+// MOD_0711: mark default active on page load
+	$('.item').each(function(){
+		$(this).removeClass('item_node_active');
+		if($(this).attr('data-id') == "19/08/2012") {
+			$(this).addClass('item_node_active');
+		}
+	});
+
+});	
+</script>
+
+
+</div> <!-- /END TIMELINE -->
+	   
+</body>
+</html>
