@@ -62,6 +62,8 @@
 			.tiles article.c-ambiguity > .image:before { background-color: #e0606e !important; }
 			.tiles article.c-ds > .image:before { background-color: #4f9fdb !important; }
 			.tiles article.c-about > .image:before { background-color: #6f9e4c !important; }
+			/* Whole card is clickable */
+			.tiles article { cursor: pointer; }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -338,5 +340,17 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+		<script>
+			// Make the entire card open its page, not just the title band
+			document.querySelectorAll('.tiles article').forEach(function (card) {
+				var link = card.querySelector('a[href]');
+				if (!link) return;
+				card.addEventListener('click', function (e) {
+					if (e.target.closest('a')) return;
+					if (e.metaKey || e.ctrlKey) { window.open(link.href, '_blank'); return; }
+					window.location.href = link.href;
+				});
+			});
+		</script>
 	</body>
 </html>
