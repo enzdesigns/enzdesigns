@@ -51,9 +51,15 @@
 			.tiles article > a { z-index: 3; }
 			body.is-touch .tiles article { --band: var(--band-open); }
 			body.is-touch .tiles article > .image.main:before { opacity: 0.35; }
-			.tiles article.petra-card > .image:not(.main):before { background-color: #705bb5; }
-			.tiles article.savi-card > .image:not(.main):before { background-color: #287b89; }
-			@media screen and (min-width: 1681px) { .tiles article { width: calc(25% - 2.5em); --band-open: 13.75em; } }
+									@media screen and (min-width: 1681px) { .tiles article { width: calc(25% - 2.5em); --band-open: 13.75em; } }
+			/* One distinct colour per card, shared by band and screenshot */
+			.tiles article.c-mydesign > .image:before { background-color: #c75b9b !important; }
+			.tiles article.c-agentic-experience > .image:before { background-color: #287b89 !important; }
+			.tiles article.c-ai-native-design > .image:before { background-color: #5b4fb5 !important; }
+			.tiles article.c-ai > .image:before { background-color: #d98a2b !important; }
+			.tiles article.c-ambiguity > .image:before { background-color: #e0606e !important; }
+			.tiles article.c-ds > .image:before { background-color: #4f9fdb !important; }
+			.tiles article.c-about > .image:before { background-color: #6f9e4c !important; }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -92,7 +98,7 @@
 								</p>
 							</header>
 							<section class="tiles">
-								<article class="style4">
+								<article class="style4 c-mydesign">
 									<span class="image">
 										<img src="images/pic04.jpg" alt="" />
 									</span>
@@ -107,7 +113,7 @@
 					
 								</article>
 								
-								<article class="style3 savi-card">
+								<article class="style3 savi-card c-agentic-experience">
 									<span class="image"><img src="images/pic03.jpg" alt="" /></span>
 									<a href="Agentic_Experience.html">
 										<h2>Agentic Experience</h2>
@@ -116,7 +122,7 @@
 									<span class="image main"><img src="images/agentic-experience/00-agentic-experience-collage.png?v=2" alt="Savi AI collage showing contextual help, an agent workspace, and guided action across product workflows" /></span>
 								</article>
 
-								<article class="style3 petra-card">
+								<article class="style3 petra-card c-ai-native-design">
 									<span class="image"><img src="images/pic03.jpg" alt="" /></span>
 									<a href="AI_Native_Design.html">
 										<h2>Designing in the Age of AI</h2>
@@ -126,7 +132,7 @@
 								</article>
 
 
-								<article class="style3">
+								<article class="style3 c-ai">
 									<span class="image">
 										<img src="images/pic03.jpg" alt="" />
 									</span>
@@ -141,7 +147,7 @@
 								</article>
 
 
-								<article class="style1">
+								<article class="style1 c-ambiguity">
 									<span class="image">
 										<img src="images/pic01.jpg" alt="" />
 									</span>
@@ -154,7 +160,7 @@
 									<span class="image main"><img src="images/ambiAll.jpg" alt="" /></span>	
 								</article>
 
-								<article class="style2">
+								<article class="style2 c-ds">
 									<span class="image">
 										<img src="images/pic02.jpg" alt="" />
 									</span>
@@ -169,7 +175,7 @@
 								</article>
 						
 						
-								<article class="style5">
+								<article class="style5 c-about">
 									<span class="image">
 										<img src="images/pic05.jpg" alt="" />
 									</span>
