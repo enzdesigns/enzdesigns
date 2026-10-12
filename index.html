@@ -11,13 +11,49 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Instrument+Serif:ital@1&display=swap" />
 		<style>
-			.tiles article.petra-card > .image.main, .tiles article.savi-card > .image.main { position: relative; aspect-ratio: 1.83; overflow: hidden; background: #fff; }
-			.tiles article.petra-card > .image.main img, .tiles article.savi-card > .image.main img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; }
-			body:not(.is-touch) .tiles article:hover > .image.main { -moz-transform: none; -webkit-transform: none; -ms-transform: none; transform: none; }
-			.tiles article.petra-card > a, .tiles article.savi-card > a { justify-content: flex-end; height: 52%; padding: 1em 1.25em 1.8em; }
+			/* ---- Intro header ---- */
+			body { background: #faf9f7; }
+			#main > .inner > header.intro { margin-bottom: 3.5em; }
+			header.intro h1 { font-family: 'Inter', sans-serif; font-weight: 800; color: #111; font-size: clamp(2.75rem, 6vw, 5.5rem); line-height: 1; letter-spacing: -0.045em; margin: 0 0 0.75em; }
+			header.intro h1 .role { display: block; margin-top: 0.08em; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; color: #4b3fc9; letter-spacing: -0.02em; line-height: 1.05; }
+			header.intro p { font-family: 'Inter', sans-serif; color: #555; font-size: 1.05rem; line-height: 1.75; max-width: 62rem; }
+
+			/* ---- MENU pill ---- */
+			#header nav ul li a[href="#menu"] { width: auto; height: 3em; line-height: 3em; text-indent: 0; padding: 0 1.4em 0 3.3em; border: 1px solid #e3e1dc; border-radius: 999px; background: #faf9f7; font-family: 'Inter', sans-serif; font-size: 0.8em; font-weight: 600; letter-spacing: 0.18em; color: #111; overflow: visible; transition: border-color .2s ease, background-color .2s ease; }
+			#header nav ul li a[href="#menu"]:hover { border-color: #c9c5bd; background: #fff; color: #111 !important; }
+			#header nav ul li a[href="#menu"]:before, #header nav ul li a[href="#menu"]:after { width: 1.5em; left: 1.3em; background-size: 1.5em 1em; }
+			#header nav ul li a[href="#menu"]:before { opacity: 0; }
+
+			/* ---- Compact cards ----
+			   Height is fixed from the card width (padding trick), so the row never shifts.
+			   The colour band holds just the title; on hover it grows to fit the description
+			   and the screenshot shrinks to fit the remaining space, uncropped. */
+			.tiles article { --band: 5.5em; --band-open: 10.5em; }
+			.tiles article:after { content: ''; display: block; padding-top: calc(55% + var(--band)); }
+			.tiles article > .image, .tiles article > a { position: absolute !important; left: 0; width: 100%; }
+			.tiles article > .image:not(.main), .tiles article > a { top: 0; height: var(--band) !important; transition: height .45s ease, background-color .5s ease; }
+			.tiles article > .image:not(.main) { border-radius: 4px 4px 0 0; }
+			.tiles article > .image:not(.main) img { width: 100%; height: 100%; object-fit: cover; }
+			.tiles article > a { justify-content: center !important; padding: 0.75em 1.25em !important; border-radius: 4px 4px 0 0; }
+			.tiles article > a .content { font-size: 0.92em; line-height: 1.5; }
+			.tiles article > a .content br { display: none; }
+			.tiles article > .image.main { top: var(--band); bottom: 0; margin: 0 !important; border-radius: 0 0 4px 4px; background: #fff; transition: top .45s ease; }
+			.tiles article > .image.main img { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+			body:not(.is-touch) .tiles article:hover > .image { transform: none !important; }
+			body:not(.is-touch) .tiles article:hover > .image:not(.main), body:not(.is-touch) .tiles article:hover > a { height: var(--band-open) !important; }
+			body:not(.is-touch) .tiles article:hover > .image.main:before { opacity: 0; }
+			.tiles article > .image.main { z-index: 0; }
+			.tiles article > .image:not(.main) { z-index: 2; }
+			.tiles article > a { z-index: 3; }
+			body.is-touch .tiles article { --band: var(--band-open); }
+			body.is-touch .tiles article > .image.main:before { opacity: 0.35; }
 			.tiles article.petra-card > .image:not(.main):before { background-color: #705bb5; }
 			.tiles article.savi-card > .image:not(.main):before { background-color: #287b89; }
+			@media screen and (min-width: 1681px) { .tiles article { width: calc(25% - 2.5em); --band-open: 13.75em; } }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -49,9 +85,8 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<header>
-								<h1>Natti Zick<br />
-								User Experience Leader.</h1>
+							<header class="intro">
+								<h1>Natti Zick <span class="role">User Experience Leader.</span></h1>
 								<p>Over a decade of experience building and leading UX organizations in startups and public companies. Setting UX vision, and managing scope from proof of concept to release. Vast experience with SaaS and B2B solutions, creating designs that render on desktops, tablets, mobile phones, and wearables. Strong customer orientation with excellent interpersonal and communication skills. Favor a management style that emphasizes collaboration and individual growth while providing structure and prioritization towards company objectives, resulting in highly productive, result-oriented teams.
 							
 								</p>
