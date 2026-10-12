@@ -17,10 +17,12 @@
 		<style>
 			/* ---- Intro header ---- */
 			body { background: #faf9f7; }
-			#main > .inner > header.intro { margin-bottom: 3.5em; }
-			header.intro h1 { font-family: 'Inter', sans-serif; font-weight: 800; color: #111; font-size: clamp(2.75rem, 6vw, 5.5rem); line-height: 1; letter-spacing: -0.045em; margin: 0 0 0.75em; }
+			#header { padding-top: 2.75em !important; }
+			#main > .inner > header.intro { margin: 0 0 2em; }
+			header.intro + .tiles { margin-top: -2.5em; }
+			header.intro h1 { font-family: 'Inter', sans-serif; font-weight: 800; color: #111; font-size: clamp(2.25rem, 4.2vw, 4rem); line-height: 1; letter-spacing: -0.045em; margin: 0 0 0.55em; }
 			header.intro h1 .role { display: block; margin-top: 0.08em; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; color: #4b3fc9; letter-spacing: -0.02em; line-height: 1.05; }
-			header.intro p { font-family: 'Inter', sans-serif; color: #555; font-size: 1.05rem; line-height: 1.75; max-width: 62rem; }
+			header.intro p { font-family: 'Inter', sans-serif; color: #555; font-size: 1rem; line-height: 1.65; max-width: 72rem; margin: 0; }
 
 			/* ---- MENU pill ---- */
 			#header nav ul li a[href="#menu"] { width: auto; height: 3em; line-height: 3em; text-indent: 0; padding: 0 1.4em 0 3.3em; border: 1px solid #e3e1dc; border-radius: 999px; background: #faf9f7; font-family: 'Inter', sans-serif; font-size: 0.8em; font-weight: 600; letter-spacing: 0.18em; color: #111; overflow: visible; transition: border-color .2s ease, background-color .2s ease; }
